@@ -1,0 +1,24 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "title": "A task",
+  "properties": {
+    "description": {
+      "type": "string",
+      "minLength": 1,
+      "title": "Description of the task"
+    },
+    "priority": {
+      "type": "integer",
+      "multipleOf": 1,
+      "maximum": 9,
+      "minimum": 0,
+      "title": "Priority",
+      "description": "Task priority, as a single-digit integer. 0 is highest priority"
+    }
+  },
+  "required": [
+    "description",
+    "priority"
+  ]
+}
